@@ -18,38 +18,24 @@ int b[10];
 	scanf("%d",&b[i]);
 	a[i].order=b[i];
 }
-quicksort(a[10],0,9);
-
+struct student temp;
+int j;
+for (i=0;i<9;i++)
+{
+	for(j=0;j<9-i;j++)
+	{
+		if(a[j].order<a[j+1].order)
+		{
+			temp=a[j];
+			a[j]=a[j+1];
+			a[j+1]=temp;
+		}
+	}
+	
+}
+printf("the bill order of the students is:\t");
 for(i=0;i<10;i++)
 {
-printf("%d\t",a[i].no);
+	printf("%d\t",a[i].no);
 }
-}
-
-void quicksort(struct student a[10],int first,int last){
-struct student temp;
-int j,pivot,i;
-if(first<last)
-{
-pivot=first;
-i=first;
-j=last;
-while(i<j)
-{
-while(a[i].order<=a[pivot].order&&i<last)
-{
-i++;}
-while(a[j].order>a[pivot].order)
-j++;
-if(i<j)
-{
-temp=a[i];
-a[i]=a[j];
-a[j]=temp;}
-}
-temp=a[pivot];
-a[pivot]=a[j];
-a[j]=temp;
-quicksort(a,first,j-1);
-quicksort(a,j+1,last);
 }
