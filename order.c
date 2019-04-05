@@ -6,7 +6,7 @@ struct student{
 int no;
 int order;
 };
-void quicksort(struct student a[10],int first,int last);
+
 
 int main(){
 struct student a[10];
