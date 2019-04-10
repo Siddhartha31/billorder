@@ -7,14 +7,13 @@ int no;
 int order;
 };
 
-
 int main(){
 struct student a[10];
 int i;
 int b[10];
  for(i=0;i<10;i++)
  {	 a[i].no=i+1;
-	printf("enter the no of order of student %d\n",i+1);
+	printf("enter the no of gifts of student %d\n",i+1);
 	scanf("%d",&b[i]);
 	a[i].order=b[i];
 }
@@ -33,9 +32,12 @@ for (i=0;i<9;i++)
 	}
 	
 }
-printf("the bill order of the students is:\t");
+printf("***//// Order of the Students  \\\\****:\n");
 for(i=0;i<10;i++)
+
 {
-	printf("%d\t",a[i].no);
+	
+	printf("Student\t");
+	printf("%d\n",a[i].no);
 }
 }
